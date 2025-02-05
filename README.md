@@ -9,4 +9,7 @@ docker compose build
 
 ## New version
 
-Update `.env`, then tag. The tag _must_ exactly match the value of `$VERSION` in `.env`.
+Update `.env` with the new version number.
+
+Create a new release in GitHub.
+The tag _must_ exactly match the value of `$VERSION` in `.env`.
