@@ -1,0 +1,6 @@
+services:
+  jgis:
+    image: "jupytergis/jupytergis"
+    build:
+      args:
+        VERSION: "${VERSION}"
