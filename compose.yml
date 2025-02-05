@@ -1,6 +1,7 @@
 services:
   jgis:
-    image: "jupytergis/jupytergis"
+    image: "ghcr.io/geojupyter/jupytergis:${IMAGE_TAG:?IMAGE_TAG must be set}"
     build:
+      context: "."
       args:
         VERSION: "${VERSION}"
