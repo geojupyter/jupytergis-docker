@@ -25,10 +25,11 @@ jobs:
     steps:
       - uses: "actions/checkout@v3"
 
-      # - name: "Check version"
-      #   run: "source .env && test ${{ github.ref_name }} = ${VERSION}" 
-      #     # TODO: Trigger on push to main; if github.ref_name is `main`, then build latest.
-      #     # Else, build tagged version and check that $VERSION matches the tag.
+      - name: "Check version"
+        if: "github.ref_type == 'tag'"
+        run: |
+          source .env
+          test ${{ github.ref_name }} = ${VERSION}
 
       - name: "Build"
         run: "docker compose build"
