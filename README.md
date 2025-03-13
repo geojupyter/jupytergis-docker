@@ -1,5 +1,10 @@
 # JupyterGIS Docker image
 
+```bash
+docker run -p 8888:8888 ghcr.io/geojupyter/jupytergis
+```
+
+
 ## Local build
 
 ```
